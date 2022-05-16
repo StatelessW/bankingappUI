@@ -1,6 +1,7 @@
-import 'package:banking_app/pages/pass_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'pages/homepage.dart';
 
 void main() => runApp(const MyApp());
 
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
               backgroundColor: Colors.transparent,
               elevation: 0,
               titleTextStyle: TextStyle(fontSize: 24))),
-      home: const PassScreen(),
+      home: const HomePage(),
     );
   }
 }

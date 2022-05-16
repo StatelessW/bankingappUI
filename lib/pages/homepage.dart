@@ -1,3 +1,6 @@
+import 'package:banking_app/utility/project_images.dart';
+import 'package:banking_app/utility/project_decorations.dart';
+import 'package:banking_app/utility/project_strings.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,53 +28,49 @@ class _HomePageState extends State<HomePage> {
 
   Padding createUserButton() {
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
+      padding: ProjectDecorations.createAccountTopPadding,
       child: ElevatedButton(
         onPressed: () {},
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(const Color(0xFF363339)),
+            backgroundColor: MaterialStateProperty.all(ProjectDecorations.createAccountButtonColor),
             shape: MaterialStateProperty.all(RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(100),
+              borderRadius: ProjectDecorations.homepageButtonsRadius,
             )),
-            fixedSize: MaterialStateProperty.all(const Size(300, 50))),
-        child: const Text('Become a client of the bank'),
+            fixedSize: MaterialStateProperty.all(ProjectDecorations.homepageButtonsSize)),
+        child: const Text(ProjectStrings.createAccountText),
       ),
     );
   }
 
   Padding loginButton() {
     return Padding(
-      padding: const EdgeInsets.only(top: 100),
+      padding: ProjectDecorations.loginButtonTopPadding,
       child: ElevatedButton(
-        onPressed: () {},
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(const Color(0xFFFCFFDF)),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(100))),
-            fixedSize: MaterialStateProperty.all(const Size(300, 50))),
-        child: const Text(
-          'Log in',
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
+          onPressed: () {},
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(ProjectDecorations.loginButtonColor),
+              shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(borderRadius: ProjectDecorations.homepageButtonsRadius)),
+              fixedSize: MaterialStateProperty.all(ProjectDecorations.homepageButtonsSize)),
+          child: const Text(ProjectStrings.loginButtonText, style: ProjectDecorations.loginButtonTextColor)),
     );
   }
 
   Padding centerImg() {
     return const Padding(
-      padding: EdgeInsets.only(top: 180),
-      child: Image(image: AssetImage('assets/images/centerLogo.png')),
+      padding: ProjectDecorations.centerImgPadding,
+      child: Image(image: AssetImage(ProjectImages.centerImage)),
     );
   }
 
   Padding titleActions() {
     return Padding(
-      padding: const EdgeInsets.only(right: 5),
+      padding: ProjectDecorations.homepage3dotsPadding,
       child: Container(
-        margin: const EdgeInsets.all(5),
+        margin: ProjectDecorations.homepage3dotsMargin,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
-          color: Colors.black12,
+          borderRadius: ProjectDecorations.actions3dotsRadius,
+          color: ProjectDecorations.homepage3dotsBorderColor,
         ),
         child: IconButton(
           icon: const Icon(Icons.more_vert),
@@ -89,6 +88,6 @@ class TitleImg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Image(image: AssetImage('assets/images/appbarLogo.png'));
+    return const Image(image: AssetImage(ProjectImages.titleImage));
   }
 }

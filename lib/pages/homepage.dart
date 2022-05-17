@@ -1,6 +1,6 @@
 import 'package:banking_app/utility/project_images.dart';
 import 'package:banking_app/utility/project_decorations.dart';
-import 'package:banking_app/utility/project_strings.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               borderRadius: ProjectDecorations.homepageButtonsRadius,
             )),
             fixedSize: MaterialStateProperty.all(ProjectDecorations.homepageButtonsSize)),
-        child: const Text(ProjectStrings.createAccountText),
+        child: Text('cAcc'.tr().toString()),
       ),
     );
   }
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(borderRadius: ProjectDecorations.homepageButtonsRadius)),
               fixedSize: MaterialStateProperty.all(ProjectDecorations.homepageButtonsSize)),
-          child: const Text(ProjectStrings.loginButtonText, style: ProjectDecorations.loginButtonTextColor)),
+          child: Text('lin'.tr().toString(), style: ProjectDecorations.loginButtonTextColor)),
     );
   }
 

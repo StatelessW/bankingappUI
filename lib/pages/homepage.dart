@@ -31,12 +31,10 @@ class _HomePageState extends State<HomePage> {
       padding: ProjectDecorations.createAccountTopPadding,
       child: ElevatedButton(
         onPressed: () {},
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(ProjectDecorations.createAccountButtonColor),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-              borderRadius: ProjectDecorations.homepageButtonsRadius,
-            )),
-            fixedSize: MaterialStateProperty.all(ProjectDecorations.homepageButtonsSize)),
+        style: ElevatedButton.styleFrom(
+            primary: ProjectDecorations.createAccountButtonColor,
+            shape: RoundedRectangleBorder(borderRadius: ProjectDecorations.homepageButtonsRadius),
+            fixedSize: ProjectDecorations.homepageButtonsSize),
         child: Text('cAcc'.tr().toString()),
       ),
     );
@@ -47,11 +45,10 @@ class _HomePageState extends State<HomePage> {
       padding: ProjectDecorations.loginButtonTopPadding,
       child: ElevatedButton(
           onPressed: () {},
-          style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(ProjectDecorations.loginButtonColor),
-              shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(borderRadius: ProjectDecorations.homepageButtonsRadius)),
-              fixedSize: MaterialStateProperty.all(ProjectDecorations.homepageButtonsSize)),
+          style: ElevatedButton.styleFrom(
+              primary: ProjectDecorations.loginButtonColor,
+              shape: RoundedRectangleBorder(borderRadius: ProjectDecorations.homepageButtonsRadius),
+              fixedSize: ProjectDecorations.homepageButtonsSize),
           child: Text('lin'.tr().toString(), style: ProjectDecorations.loginButtonTextColor)),
     );
   }

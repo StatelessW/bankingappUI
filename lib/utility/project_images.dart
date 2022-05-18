@@ -1,4 +1,7 @@
-class ProjectImages {
-  static const String titleImage = 'assets/images/appbarLogo.png';
-  static const String centerImage = 'assets/images/centerLogo.png';
+enum ImgPath {
+  titleLogo('assets/images/appbarLogo.png'),
+  centerLogo('assets/images/centerLogo.png');
+
+  const ImgPath(this.path);
+  final String path;
 }

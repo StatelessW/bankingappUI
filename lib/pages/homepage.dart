@@ -54,9 +54,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   Padding centerImg() {
-    return const Padding(
+    const center = ImgPath.centerLogo;
+    return Padding(
       padding: ProjectDecorations.centerImgPadding,
-      child: Image(image: AssetImage(ProjectImages.centerImage)),
+      child: Image(image: AssetImage(center.path)),
     );
   }
 
@@ -83,8 +84,10 @@ class TitleImg extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  static const title = ImgPath.titleLogo;
+
   @override
   Widget build(BuildContext context) {
-    return const Image(image: AssetImage(ProjectImages.titleImage));
+    return Image(image: AssetImage(title.path));
   }
 }
